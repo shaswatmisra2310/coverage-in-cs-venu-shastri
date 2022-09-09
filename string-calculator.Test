@@ -10,6 +10,9 @@ class implementation
 {
 static int Add(string number)
 {
+if(number=="")
+  return 0;
+else
   throw NotImplementedException();
 }
 }

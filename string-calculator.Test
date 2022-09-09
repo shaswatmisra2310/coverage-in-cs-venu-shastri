@@ -1,1 +1,6 @@
+using Xunit;
+void GivenEmptyStringZeroExpected()
+{
+  int expected_Value=Add("");
+}
 Assert.True(GivenEmptyStringZeroExpected()==0)

@@ -68,11 +68,11 @@ namespace TypewiseAlert
           break;
       }
     }
-    public delegate static void sendToController(BreachType breachType) {
+    public static void sendToController(BreachType breachType) {
       const ushort header = 0xfeed;
       Console.WriteLine("{} : {}\n", header, breachType);
     }
-    public delegate static void sendToEmail(BreachType breachType) {
+    public static void sendToEmail(BreachType breachType) {
       string recepient = "a.b@c.com";
       switch(breachType) {
         case BreachType.TOO_LOW:

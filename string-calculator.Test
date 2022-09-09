@@ -1,6 +1,15 @@
 using Xunit;
+using System;
 void GivenEmptyStringZeroExpected()
 {
   int expected_Value=Add("");
 }
 Assert.True(GivenEmptyStringZeroExpected()==0)
+//code implementation
+class implementation
+{
+static int Add(string number)
+{
+  throw NotImplementedException();
+}
+}

@@ -23,6 +23,7 @@ namespace TypewiseAlert
       HI_ACTIVE_COOLING,
       MED_ACTIVE_COOLING
     };
+    
     public static BreachType classifyTemperatureBreach(
         CoolingType coolingType, double temperatureInC) {
       int lowerLimit = 0;

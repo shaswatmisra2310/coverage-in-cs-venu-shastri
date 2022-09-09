@@ -52,7 +52,7 @@ namespace TypewiseAlert
       public string brand;
     }
     public static void checkAndAlert(
-        AlertTarget alertTarget, BatteryCharacter batteryChar, double temperatureInC, Del handler) {
+        AlertTarget alertTarget, BatteryCharacter batteryChar, double temperatureInC) {
 
       BreachType breachType = classifyTemperatureBreach(
         batteryChar.coolingType, temperatureInC

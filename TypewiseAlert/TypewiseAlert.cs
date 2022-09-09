@@ -52,7 +52,7 @@ namespace TypewiseAlert
       public string brand;
     }
     public static void checkAndAlert(
-        AlertTarget alertTarget, BatteryCharacter batteryChar, double temperatureInC) {
+        AlertTarget alertTarget, BatteryCharacter batteryChar, double temperatureInC, Del handler) {
 
       BreachType breachType = classifyTemperatureBreach(
         batteryChar.coolingType, temperatureInC
@@ -67,11 +67,11 @@ namespace TypewiseAlert
           break;
       }
     }
-    public static void sendToController(BreachType breachType) {
+    public delegate static void sendToController(BreachType breachType) {
       const ushort header = 0xfeed;
       Console.WriteLine("{} : {}\n", header, breachType);
     }
-    public static void sendToEmail(BreachType breachType) {
+    public delegate static void sendToEmail(BreachType breachType) {
       string recepient = "a.b@c.com";
       switch(breachType) {
         case BreachType.TOO_LOW:

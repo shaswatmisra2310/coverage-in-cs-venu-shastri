@@ -39,5 +39,14 @@ namespace TypewiseAlert.Test
       Assert.True(TypewiseAlert.classifyTemperatureBreach(TypewiseAlert.CoolingType.MED_ACTIVE_COOLING,-25) == 
                   TypewiseAlert.BreachType.TOO_LOW);
     }
+    [Fact]
+    public void checkAndAlertAsPerLimits()
+    {
+      TypewiseAlert.BatteryCharacter bc = new TypewiseAlert.BatteryCharacter();
+      bc.coolingType=TypewiseAlert.CoolingType.MED_ACTIVE_COOLING;
+      bc.brand="abcd";
+      Assert.True(TypewiseAlert.checkAndAlert(TypewiseAlert.AlertTarget.TO_CONTROLLER,,20) == 
+                  TypewiseAlert.BreachType.NORMAL);
+    }
   }
 }

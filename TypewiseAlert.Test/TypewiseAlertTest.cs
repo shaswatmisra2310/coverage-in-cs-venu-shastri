@@ -20,7 +20,7 @@ namespace TypewiseAlert.Test
     public void classifyTemperatureBreachAsPerLimits()
     {
       
-      Assert.True(TypewiseAlert.classifyTemperatureBreach(new TypewiseAlert.CoolingType.PASSIVE_COOLING,20) == 
+      Assert.True(TypewiseAlert.classifyTemperatureBreach(TypewiseAlert.CoolingType.PASSIVE_COOLING,20) == 
                   TypewiseAlert.BreachType.NORMAL);
                   
       

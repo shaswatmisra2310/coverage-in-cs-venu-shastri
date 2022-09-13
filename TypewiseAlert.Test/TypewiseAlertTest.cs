@@ -14,6 +14,8 @@ namespace TypewiseAlert.Test
         TypewiseAlert.BreachType.TOO_HIGH);
       Assert.True(TypewiseAlert.inferBreach(25,20,30)==
                   TypewiseAlert.BreachType.NORMAL);
+      Assert.True(TypewiseAlert.inferBreach(25,20,30)==
+                  TypewiseAlert.BreachType.NORMAL);
       
     }
   }

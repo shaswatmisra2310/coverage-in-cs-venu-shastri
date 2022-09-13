@@ -45,7 +45,7 @@ namespace TypewiseAlert.Test
       TypewiseAlert.BatteryCharacter bc = new TypewiseAlert.BatteryCharacter();
       bc.coolingType=TypewiseAlert.CoolingType.MED_ACTIVE_COOLING;
       bc.brand="abcd";
-      TypewiseAlert.checkAndAlert(TypewiseAlert.AlertTarget.TO_CONTROLLER,bc,20);
+      TypewiseAlert.checkAndAlert(TypewiseAlert.AlertTarget.TO_CONTROLLER,bc,20)==void;
     }
   }
 }

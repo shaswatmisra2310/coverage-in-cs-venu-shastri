@@ -32,7 +32,12 @@ namespace TypewiseAlert.Test
                   TypewiseAlert.BreachType.TOO_HIGH);
       Assert.True(TypewiseAlert.classifyTemperatureBreach(TypewiseAlert.CoolingType.MED_ACTIVE_COOLING,50) == 
                   TypewiseAlert.BreachType.TOO_HIGH);
-      
+      Assert.True(TypewiseAlert.classifyTemperatureBreach(TypewiseAlert.CoolingType.PASSIVE_COOLING,-5) == 
+                  TypewiseAlert.BreachType.TOO_LOW);
+     Assert.True(TypewiseAlert.classifyTemperatureBreach(TypewiseAlert.CoolingType.HI_ACTIVE_COOLING,-15) == 
+                  TypewiseAlert.BreachType.TOO_LOW);
+      Assert.True(TypewiseAlert.classifyTemperatureBreach(TypewiseAlert.CoolingType.MED_ACTIVE_COOLING,-25) == 
+                  TypewiseAlert.BreachType.TOO_LOW);
     }
   }
 }

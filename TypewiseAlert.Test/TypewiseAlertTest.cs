@@ -19,9 +19,10 @@ namespace TypewiseAlert.Test
     [Fact]
     public void classifyTemperatureBreachAsPerLimits()
     {
-      TypewiseAlert.CoolingType  = new TypewiseAlert.CoolingType
-      Assert.True(TypewiseAlert.classifyTemperatureBreach(new TypewiseAlert.CoolingType.PASSIVE_COOLING,20) ==
-                  lowerlimit ==0);
+      
+      Assert.True(TypewiseAlert.classifyTemperatureBreach(new TypewiseAlert.CoolingType.PASSIVE_COOLING,20) == 
+                  TypewiseAlert.BreachType.NORMAL);
+                  
       
     }
   }
